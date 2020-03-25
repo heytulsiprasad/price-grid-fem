@@ -1,0 +1,18 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 48%;
+    height: 65%;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 25px var(--color-grayish-blue);
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
