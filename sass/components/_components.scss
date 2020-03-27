@@ -1,106 +1,120 @@
 .box {
-    &__intro {
+    &__first {
         height: 47%;
-        padding: 2rem 3rem;
+        background-color: var(--color-bg-header);
+        padding: 5rem 4rem;
 
-        &-title {
-            color: var(--color-cyan);
-            font-size: 30px;
-            margin-top: 1rem;
+        @include respond(large) {
+            height: 28.5rem;
+        }
+
+        @include respond(small) {
+            height: 30rem;
+        }
+    }
+
+    &__last {
+        min-height: 54%;
+        display: flex;
+
+        @include respond(large) {
+            flex-direction: column;
+        }
+    }
+
+    &__cta {
+        width: 40rem;
+        background-color: var(--color-bg-cta);
+        color: #ffffff;
+        padding: 3.5rem;
+        padding-left: 4rem;
+
+        @include respond(small) {
+            width: 100%;
+        }
+
+
+        &-h1 {
+            font-size: 2.3rem;
+            padding: 1rem 2rem 2rem 0;
+        }
+
+        &--h2 {
+            display: flex;
+            align-items: center;
+            padding: 1rem 4rem .5rem 0;
+
+            &-dollar {
+                font-size: 3rem;
+                padding-right: .6rem;
+            }
         }
 
         &-subtitle {
-            color: var(--color-bright-yellow);
-            font-size: 22px;
-            margin-top: 22px;
-        }
+            font-size: 1.5rem;
+            padding: .2rem 4rem 3rem 0;
 
-        &-description {
-            color: var(--color-grayish-blue);
-            font-size: 17px;
-            margin-top: 17px;
-            padding-right: 3rem;
-        }
-    }
-
-    &__extro {
-        height: 53%;
-        display: flex;
-    }
-
-    &__subscribe {
-        flex-basis: 50%;
-        padding: 2.5rem;
-        background-color: var(--color-cyan);
-        color: #fff;
-
-        &-title {
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-        &-caption {
-            display: flex;
-            margin-top: 17px;
-            align-items: center;
-
-            span {
-                font-size: 35px;
-            }
-
-            p {
-                color: #fff;
-                font-weight: 400;
-                margin-left: 12px;
+            @include respond(smallest) {
+                padding: .2rem 0 2.5rem 0;
             }
         }
 
-        &-aftertext {
-            margin-top: 8px;
-        }
-
-        &-btn {
-            margin-top: 30px;
-            width: 93%;
-            padding: 15px 40px;
-            border-radius: 5px;
+        &-button {
+            padding: 1.5rem 12rem;
+            background-color: var(--color-button);
             border: none;
             outline: none;
-            cursor: pointer;
-            box-shadow: 2px 2px 15px rgba(87, 90, 94, 0.699);
-            background-color: var(--color-bright-yellow);
             color: #fff;
-            font-size: 15px;
-            transition: all .3s;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 4px;
+            box-shadow: 0px 4px 16px 0px #00000050;
+            cursor: pointer;
+            transition: all .2s ease-out;
+
+            @include respond(small) {
+                padding: 1.5rem 11rem;
+            }
+
+            @include respond(smallest) {
+                padding: 1.5rem 8.5rem;
+            }
 
             &:hover {
-                background-color: var(--color-hover-yellow);
+                background-color: var(--color-button-hover);
+                transform: translateY(-.8px);
             }
 
             &:active {
-                transform: scale(.98);
+                transform: scale(0.99);
             }
         }
     }
 
-    &__reason {
-        flex-basis: 50%;
-        padding: 2.5rem;
-        background-color: var(--color-cyan-light);
+    &__feature {
+        width: 40rem;
+        background-color: var(--color-bg-feature);
         color: #fff;
+        padding: 3.5rem;
+        padding-left: 4rem;
 
-        &-title {
-            font-weight: 700;
-            font-size: 20px;
-            margin-bottom: 16px;
+        @include respond(small) {
+            width: 100%;
         }
 
-        &-list {
+
+        &-h1 {
+            font-size: 2.2rem;
+            padding: 1rem 2rem 1rem 0;
+        }
+
+        &--list {
             list-style: none;
+            padding: 2rem 4rem 1rem 0;
 
             &-item {
-                font-size: 15px;
-                line-height: 22px;
+                font-size: 1.6rem;
+                line-height: 2rem;
             }
         }
     }

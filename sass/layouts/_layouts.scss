@@ -1,18 +1,41 @@
 .container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 6rem 2rem;
+
+    @include respond(small) {
+        padding: 5rem 2rem;
+    }
 }
 
 .box {
-    width: 48%;
-    height: 65%;
-    background-color: whitesmoke;
-    box-shadow: 0 4px 25px var(--color-grayish-blue);
-    border-radius: 7px;
-
+    width: 80rem;
+    height: 55rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 2px 3px 20px 4px #00000036;
+    border-radius: 10px;
     overflow: hidden;
+
+    @include respond(large) {
+        height: 84rem;
+        width: 40rem;
+    }
+
+    @include respond(small) {
+        width: 35rem;
+        height: 85.5rem;
+    }
+
+    @include respond(smaller) {
+        height: 85rem;
+    }
+
+    @include respond(smallest) {
+        width: 32rem;
+        height: 89rem;
+    }
 }

@@ -1,11 +1,20 @@
 :root {
-    --color-cyan: hsl(179, 62%, 43%);
-    --color-light-gray: hsl(204, 43%, 93%);
-    --color-grayish-blue: hsl(218, 22%, 67%);
+    --color-bg-body: hsl(204, 43%, 93%);
+    --color-bg-header: #ffffff;
 
-    --color-cyan: hsl(179, 62%, 43%);
-    --color-cyan-light: hsla(179, 62%, 43%, 0.692);
+    --color-heading-1: hsl(179, 62%, 43%);
+    --color-heading-2: hsl(71, 73%, 54%);
+    --color-paragraph: #a8d8d8;
 
-    --color-bright-yellow: hsl(71, 73%, 54%);
-    --color-hover-yellow: hsl(71, 65%, 51%);
+    --color-button-hover: hsla(71, 73%, 54%, 0.815);
+    --color-button: #c0d830;
+
+    --color-bg-cta: #30a8a8e5;
+    --color-bg-feature: #48c0c0e3;
 }
+
+$largest: 900px;
+$large: 700px;
+$small: 450px;
+$smaller: 390px;
+$smallest: 340px;

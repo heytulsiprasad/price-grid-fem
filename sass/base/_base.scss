@@ -7,11 +7,23 @@
 }
 
 html {
-    font-size: 100%;
+    font-size: 62.5%; // 1rem = 10px
+
+    @include respond(largest) {
+        font-size: 52%;
+    }
+
+    @include respond(large) {
+        font-size: 62.5%;
+    }
+
+    @include respond(smaller) {
+        font-size: 52%;
+    }
 }
 
 body {
     box-sizing: border-box;
     font-family: "Karla", sans-serif;
-    background-color: var(--color-light-gray);
+    background-color: var(--color-bg-body);
 }
